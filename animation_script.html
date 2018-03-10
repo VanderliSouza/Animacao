@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<style>
+#container {
+  width: 1100px;
+  height: 1100px;
+  position: relative;
+  background: yellow;
+}
+#animate {
+  width: 1000px;
+  height: 1000px;
+  position: absolute;
+  background-color: white;
+}
+</style>
+<body>
+
+
+
+
+
+<p>
+<button onclick="myMove()">Click Me</button>
+</p> 
+
+<div id ="container">
+<div id ="animate">
+
+	<img src ="C:\Users\Carol.CORSI-PC\Documents\NetBeansProjects\Animacao\legiao_sera.png" width="90%" class="image_we"/>>
+	</div>
+</div>
+
+
+
+<script>
+function myMove() {
+  var elem = document.getElementById("animate");   
+  var pos = 0;
+  var id = setInterval(frame, 30);
+  function frame() {
+    if (pos == 500) {
+      clearInterval(id);
+	  scrollWindow();
+    } else {
+      pos--; 
+      elem.style.top = pos + 'px'; 
+	  
+     /* elem.style.left = pos + 'px'; */
+    }
+  }
+}
+</script>
+
+</body>
+</html>
